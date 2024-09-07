@@ -1,0 +1,50 @@
+<html>
+<head>
+<title> Name App by Kamal Sir</title>
+<style>
+*{font-size :50px;font-family:ink free;}
+body{background-color:lightyellow;}
+</style>
+</head>
+<body>
+<center>
+<h1> Name App</h1>
+<form onsubmit="show()">
+<input type = "text"  id="name" placeholder="Enter your Name"/>
+<br/><br/>
+<input type = "submit"/>
+</form>
+<h2 id = "msg"/>
+<script>
+function show()
+{ 
+event.preventDefault();
+let name = document.getElementById("name");
+let msg = document.getElementById("msg");
+
+    let n = name.value;
+    let d = new Date();
+    let hr = d.getHours();
+if(hr<12)
+msg.innerHTML = "Good Morning " + n;
+else if(hr<16)
+msg.innerHTML = "Good AfterNoon " + n;
+else 
+msg.innerHtml  = "Good Evening" + n;
+}
+</script>
+</center>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+</html>
